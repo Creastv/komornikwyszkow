@@ -1,7 +1,6 @@
 .btn {
   color: $black;
   padding: 10px 25px;
-  border-radius: 100px;
   border: 1px solid $gray;
   text-decoration: none;
   transition: 0.1s linear;
@@ -17,7 +16,6 @@
 .btn-revers {
   color: $main;
   padding: 10px 25px;
-  border-radius: 100px;
   border: 1px solid $main;
   text-decoration: none;
   &:hover {

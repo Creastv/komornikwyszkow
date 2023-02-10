@@ -12,7 +12,7 @@ function go_post_types_licytacje() {
 
 	$args = array( 
 	    'public' => true,
-		'has_archive' => false,
+		'has_archive' => true,
 		'show_in_rest' => true,
 		'hierarchical'      => true,
 		'labels'            => $labels,
@@ -22,7 +22,7 @@ function go_post_types_licytacje() {
 		'publicly_queryable' => true,
 		'show_in_rest' => true,
 		"rewrite"             => array( "slug" => "licytacje", "with_front" => true ),
-		'supports'      => array( 'title', 'page-attributes', 'thumbnail', 'editor', 'excerpt' ),
+		'supports'      => array( 'title', 'page-attributes', 'thumbnail', ),
 		// , 'editor' 
 	);
     register_post_type( 'licytacje', $args );

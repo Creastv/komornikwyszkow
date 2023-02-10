@@ -18,7 +18,10 @@ require get_template_directory() . '/func/clean-up.php';
 require get_template_directory() . '/func/cpt.php';
 require get_template_directory() . '/blocks/blocks.php';
 
-
+// gutenberg editor
+function add_block_editor_assets(){
+  wp_enqueue_style('block_editor_css', get_template_directory_uri().'/src/css/go-admin.min.css');
+}
 // Paginacja
 function pagination_bars() {
     global $wp_query;
@@ -76,3 +79,15 @@ function ka_override_MCE_options($init)
 	return ' ... ';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
+
+
+
+// disable gut for pages
+// add_filter( 'use_block_editor_for_post', 'my_disable_gutenberg', 10, 2 );
+
+// function my_disable_gutenberg( $can_edit, $post ) {
+//   if ( !get_page_template_slug( $post->ID ) == 'page-home.php' && !get_page_template_slug( $post->ID ) == 'page-contact.php') {
+//     return true;
+//   }
+//   return false;
+// }

@@ -20,8 +20,8 @@ body {
 }
 
 .container {
-  max-width: 1440px;
-  width: 90%;
+  max-width: 1555px;
+  width: 100%;
   margin: 0 auto;
   @media #{$md} {
     width: 100%;
@@ -29,11 +29,11 @@ body {
 }
 
 .row {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 50px;
+  padding-right: 50px;
   @media #{$sm} {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
 #error {
@@ -90,4 +90,14 @@ body {
   background: red;
   position: absolute;
   margin-top: -100px;
+}
+
+.go-pagination {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 10px;
 }

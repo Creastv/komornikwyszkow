@@ -1,21 +1,6 @@
-<?php
-if(is_home()) {
-$slug = get_page_by_path( 'insights' ); 
-$header         = get_field('header', $slug->ID);
-$displayHeader  = get_field('display_header', $slug->ID);
-} else {
-$header         = get_field('header');
-$displayHeader  = get_field('display_header');
-}
-?>
-<?php if($displayHeader) { ?>
 <header class="t-page <?php echo the_ID()?>">
-    <div class="t-page__content">
-        <?php if($header['subtitle']) { ?>
-        <span class="c-main"><?php echo $header['subtitle']; ?></span>
-        <?php } ?>
-        <h1 class="entry-title">
-            <?php if ( is_category() ) :
+    <h1 class="entry-title">
+        <?php if ( is_category() ) :
 					single_cat_title();					
 					elseif (is_404()) :
 						_e( '404', 'go');
@@ -44,14 +29,7 @@ $displayHeader  = get_field('display_header');
 					elseif ( is_tax( 'post_format', 'post-format-link' ) ) :
 						_e( 'Links', 'go' );
 					else :
-						_e( 'Insights', 'go' );
+						_e( 'Licytacje', 'go' );
 				endif; ?>
-        </h1>
-        <?php if($header['excerpt']) { ?>
-        <p><?php echo $header['excerpt']; ?></p>
-        <?php }
-		echo category_description();
-		?>
-    </div>
+    </h1>
 </header>
-<?php } ?>

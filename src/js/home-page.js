@@ -1,68 +1,80 @@
-(window.onload = function (event) {
-  var swiper = new Swiper(".exp", {
-    slidesPerView: 2,
-    spaceBetween: 30,
-    centeredSlides: true,
-    freeMode: true,
-    loop: true,
-    // lazy: true,
-    autoplay: {
-      delay: 3900,
-      disableOnInteraction: false
-    },
-    navigation: {
-      nextEl: ".sw-next",
-      prevEl: ".sw-prev"
-    },
-    breakpoints: {
-      778: {
-        // centeredSlides: true,
-        slidesPerView: 2
-      },
-      998: {
-        slidesPerView: 2
-      },
-      1100: {
-        slidesPerView: 3
-      },
-      1300: {
-        slidesPerView: 3
-      }
+(window.load = function (event) {
+  const togglerNav = document.querySelector(".js-navbar__toggler");
+  const nav = document.querySelector(".js-navbar__navigation");
+  let navFlag = false;
+
+  togglerNav.addEventListener("click", () => {
+    if (navFlag == false) {
+      nav.classList.add("active");
+      togglerNav.classList.add("active");
+      document.querySelector("body").style.overflow = "hidden";
+      navFlag = true;
+    } else {
+      nav.classList.remove("active");
+      togglerNav.classList.remove("active");
+      document.querySelector("body").style.overflow = "inherit";
+      // document.querySelector(".js-header").classList.remove("active");
+      navFlag = false;
     }
+    loadItemsNav();
   });
-  var swiper = new Swiper(".mySwiper", {
-    effect: "creative",
-    // loop: true,
-    autoplay: {
-      delay: 3900,
-      disableOnInteraction: false
-    },
-    pagination: {
-      el: ".s-pagination",
-      clickable: true,
-      renderBullet: function (index, className) {
-        return '<span class="' + className + '">' + (index + 1) + "</span>";
-      }
-    },
-    navigation: {
-      nextEl: ".s-next",
-      prevEl: ".s-prev"
-    },
-    creativeEffect: {
-      prev: {
-        opacity: 0,
-        translate: [0, 0, -500]
-      },
-      next: {
-        opacity: 0,
-        translate: [0, 0, 0]
-      }
-    }
-  });
-  if (window.innerWidth > 960) {
-    window.addEventListener("scroll", () => {
-      let scrollTop = document.documentElement.scrollTop;
-      document.querySelector(".slider__bg").style.width = 100 + scrollTop / 100 + "%";
+  function loadItemsNav() {
+    const li = [...document.querySelectorAll(".js-header-nav-list li")];
+    let index = 0;
+    setTimeout(function () {
+      window.setInterval(function () {
+        if (index < li.length) {
+          li[index++].classList.toggle("liVisible");
+        }
+      }, 150);
+    }, 0);
+  }
+  // Close after click the navmenu on mobile
+  const itemsNAv = document.querySelectorAll(".js-navbar__navigation a");
+  for (let i = 0; i < itemsNAv.length; i++) {
+    itemsNAv[i].addEventListener("click", () => {
+      nav.classList.remove("active");
+      togglerNav.classList.remove("active");
+      navFlag = false;
     });
   }
+  // Go to Top
+  const goToTop = document.querySelector("#go-to-top");
+  goToTop.addEventListener("click", () => {
+    document.documentElement.scrollTop = 0;
+  });
+  document.addEventListener("scroll", () => {
+    if (window.pageYOffset >= 200) {
+      goToTop.classList.add("active");
+    } else {
+      goToTop.classList.remove("active");
+    }
+  });
+  // sticy nabvbar
+  const navbar = document.querySelector("#header");
+  document.addEventListener("scroll", () => {
+    var st = window.pageYOffset || document.documentElement.scrollTop;
+    if (window.pageYOffset) {
+      navbar.classList.add("active");
+    } else {
+      navbar.classList.remove("active");
+    }
+  });
+
+  // set body padding top by geting header height
+  // function heightHeader() {
+  //   const heightHeader = document.querySelector("#header");
+  //   document.querySelector("body").style.paddingTop = heightHeader.clientHeight + "px";
+  // }
+  // window.addEventListener("resize", heightHeader);
+  // heightHeader();
+
+  function heightHeader() {
+    const heightHeader = document.querySelector("#header");
+    document.querySelector(".cont").style.paddingTop = heightHeader.clientHeight + "px";
+  }
+  window.addEventListener("resize", heightHeader);
+  heightHeader();
+
+  //   // scroll to section
 })();

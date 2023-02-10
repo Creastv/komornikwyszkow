@@ -1,4 +1,8 @@
-form {
+.form-contact {
+  padding: 0 40px;
+  @media #{$md} {
+    padding: 30px 0;
+  }
 }
 .form-group {
   position: relative;
@@ -9,9 +13,13 @@ form {
     min-height: 55px;
     height: 100%;
     padding: 10px;
-    // margin: 10px;
-    background-color: $light;
+    border: 1px solid #fff !important;
+    color: #fff;
+    background: none;
     border: 0;
+  }
+  ::placeholder {
+    color: #fff !important;
   }
   .wpcf7-form-control-wrap {
     width: 100%;
@@ -48,11 +56,12 @@ form {
 
 .wpcf7-submit {
   margin: 15px;
-  background-color: #fff;
+  background: none;
   border: 1px solid $main;
   color: $main;
   cursor: pointer;
   font-size: 16px;
+  padding: 10px 20px;
   &:hover {
     background-color: $main;
     color: #fff;
@@ -69,5 +78,6 @@ form {
   //   position: absolute;
   //   -webkit-transform: translateY(18px);
   //   transform: translateY(18px);
-  font-size: 14px;
+  font-size: 12px !important;
+  color: red !important;
 }

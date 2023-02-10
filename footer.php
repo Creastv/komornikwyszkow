@@ -2,17 +2,10 @@
 </div>
 </main>
 <footer id="footer" itemscope itemtype="http://schema.org/WPFooter">
-    <?php get_template_part('templates-parts/footer/footer', 'social-media'); ?>
     <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="footer__wraper">
-                    <?php get_template_part('templates-parts/footer/footer', 'main'); ?>
-                </div>
-            </div>
-        </div>
+        <?php get_template_part('templates-parts/footer/footer', 'main'); ?>
+        <?php get_template_part('templates-parts/footer/footer', 'info'); ?>
     </div>
-    <?php get_template_part('templates-parts/footer/footer', 'info'); ?>
 </footer>
 <span id="go-to-top">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
