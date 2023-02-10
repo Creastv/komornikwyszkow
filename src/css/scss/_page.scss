@@ -98,6 +98,7 @@
   .row-col {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 
     .left {
       width: 60%;
@@ -118,7 +119,7 @@
       }
     }
     .right {
-      width: 40%;
+      width: 35%;
       @media #{$md} {
         width: 100%;
       }

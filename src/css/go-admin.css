@@ -343,6 +343,9 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .page-template-page-contact .row-col .left {
@@ -376,7 +379,7 @@ body {
 }
 
 .page-template-page-contact .row-col .right {
-  width: 40%;
+  width: 35%;
 }
 
 @media only screen and (max-width: 998px) {
