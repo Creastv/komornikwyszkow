@@ -3,8 +3,10 @@
 </main>
 <footer id="footer" itemscope itemtype="http://schema.org/WPFooter">
     <div class="container">
-        <?php get_template_part('templates-parts/footer/footer', 'main'); ?>
-        <?php get_template_part('templates-parts/footer/footer', 'info'); ?>
+        <div class="row">
+            <?php get_template_part('templates-parts/footer/footer', 'main'); ?>
+            <?php get_template_part('templates-parts/footer/footer', 'info'); ?>
+        </div>
     </div>
 </footer>
 <span id="go-to-top">
