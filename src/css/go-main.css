@@ -1096,6 +1096,12 @@ footer {
   background-color: #bc9c3b;
 }
 
+@media only screen and (max-width: 998px) {
+  .form-contact {
+    padding: 30px 0;
+  }
+}
+
 .form-group {
   position: relative;
   display: -webkit-box;
@@ -1230,6 +1236,12 @@ footer {
 .btn-revers:hover {
   color: #fff;
   background-color: #bc9c3b;
+}
+
+@media only screen and (max-width: 998px) {
+  .form-contact {
+    padding: 30px 0;
+  }
 }
 
 .form-group {
