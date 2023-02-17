@@ -260,8 +260,48 @@ body {
 #list ul {
   padding: 0px;
   list-style: none;
-  columns: 6;
-  -webkit-columns: 6;
-  -moz-columns: 6;
+  columns: 21;
+  -webkit-columns: 21;
+  -moz-columns: 21;
+}
+
+@media only screen and (max-width: 1400px) {
+  #list ul {
+    columns: 18;
+    -webkit-columns: 18;
+    -moz-columns: 18;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  #list ul {
+    columns: 12;
+    -webkit-columns: 12;
+    -moz-columns: 12;
+  }
+}
+
+@media only screen and (max-width: 998px) {
+  #list ul {
+    columns: 8;
+    -webkit-columns: 8;
+    -moz-columns: 8;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  #list ul {
+    columns: 6;
+    -webkit-columns: 6;
+    -moz-columns: 6;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  #list ul {
+    columns: 4;
+    -webkit-columns: 4;
+    -moz-columns: 4;
+  }
 }
 /*# sourceMappingURL=list.css.map */

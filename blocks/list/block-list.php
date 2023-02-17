@@ -11,9 +11,10 @@ $list = get_field('list');
     </div>
     <?php if($list) { ?>
     <ul class="list">
-        <?php foreach($list as $item) { ?>
+        <!-- <?php foreach($list as $item) { ?>
         <li><span class="li"><?php echo $item['li'] ?></span></li>
-        <?php } ?>
+        <?php } ?> -->
+        <li><span class="li"></span></li>
     </ul>
     <?php } ?>
 

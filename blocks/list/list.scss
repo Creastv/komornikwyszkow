@@ -22,8 +22,33 @@
   ul {
     padding: 0px;
     list-style: none;
-    columns: 6;
-    -webkit-columns: 6;
-    -moz-columns: 6;
+    columns: 21;
+    -webkit-columns: 21;
+    -moz-columns: 21;
+    @media #{$xlg} {
+      columns: 18;
+      -webkit-columns: 18;
+      -moz-columns: 18;
+    }
+    @media #{$lg} {
+      columns: 12;
+      -webkit-columns: 12;
+      -moz-columns: 12;
+    }
+    @media #{$md} {
+      columns: 8;
+      -webkit-columns: 8;
+      -moz-columns: 8;
+    }
+    @media #{$xs} {
+      columns: 6;
+      -webkit-columns: 6;
+      -moz-columns: 6;
+    }
+    @media #{$xs} {
+      columns: 4;
+      -webkit-columns: 4;
+      -moz-columns: 4;
+    }
   }
 }
